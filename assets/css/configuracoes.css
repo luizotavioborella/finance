@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Inter";
+}
+
+:root {
+    --azul-principal: rgb(0, 0, 84);
+    --azul-secundario: rgb(213, 213, 255);
+    --azul-terciario: rgb(0, 0, 152);
+}
+
+main {
+    display: flex;
+    gap: 20px;
+}
+
+.menu {
+    background-color: var(--azul-principal);
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    padding-top: 20px;
+    padding-bottom: 3.42%
+}
+
+.menu p {
+    color: var(--azul-secundario);
+}
+
+.menu .top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20px;
+}
+
+.menu .top .texto {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: -10px;
+}
+
+.menu h1 {
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.menu .top p {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.menu p {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+nav {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+hr {
+    max-width: 90%;
+    height: 1px;
+    background-color: var(--azul-secundario);
+    border: 0px;
+    margin-left: 10px;
+}
+
+.menu nav .bottom {
+    margin-top: 37px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 10px 10px 20px;
+    border-radius: 10px;
+    transition: 0.3s all;
+}
+
+.menu nav .botoes:hover {
+    background-color: var(--azul-terciario);
+    padding: 10px 10px 10px 20px;
+    border-radius: 10px;
+    transition: 0.3s all;
+}
+
+body {
+    background-color: #f4f9ff;
+    min-height: 100vh;
+}
+
+body > h1 {
+    margin-left: 280px;
+    padding-top: 25px;
+    color: var(--azul-principal);
+    font-size: 30px;
+    font-weight: 700;
+}
+
+body > h2 {
+    margin-left: 280px;
+    margin-top: 5px;
+    color: #617ca3;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+.configuracoes {
+    margin-left: 280px;
+    margin-top: 25px;
+    width: calc(100% - 320px);
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.titulo-configuracao {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.titulo-configuracao h2 {
+    color: var(--azul-principal);
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.titulo-configuracao p {
+    color: #617ca3;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 3px;
+}
+
+
+.icone-tema img {
+    width: 35px;
+    height: 40px;
+}
+
+
+.opcoes-tema {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.tema {
+    position: relative;
+    width: 50%;
+    height: 350px;
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: #eaf4ff;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.tema:hover {
+    border-color: #1685ff;
+}
+
+.tema.selecionado {
+    border: 2px solid #1685ff;
+}
+
+.tema img {
+    width: 85%;
+    height: 200px;
+    display: block;
+    margin: 0 auto 5px;
+    border-radius: 20px;
+}
+
+.tema h3 {
+    color: var(--azul-principal);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.tema p {
+    color: #496b99;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.tema:not(.selecionado)::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #6d96c5;
+    border-radius: 50%;
+}
+
+
+
+.tema.selecionado::after {
+    content: "✓";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: #1685ff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    padding-top: 20px;
+}
+
+body > h1,
+body > h2,
+.configuracoes {
+    margin-left: 280px;
+}
+

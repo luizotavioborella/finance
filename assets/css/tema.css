@@ -1,0 +1,198 @@
+:root{
+    --escuro-fundo:rgb(14,16,22);
+    --escuro-card:rgb(24,27,35);
+    --escuro-menu:rgb(7,9,14);
+    --escuro-menu-hover:rgb(22,55,105);
+    --escuro-texto:rgb(238,242,250);
+    --escuro-texto-claro:rgb(158,171,194);
+    --escuro-borda:rgb(48,54,67);
+    --escuro-azul:rgb(77,145,255);
+    --escuro-azul-claro:rgb(27,40,61);
+    --escuro-input:rgb(18,21,28);
+    --escuro-verde-card:rgba(18,169,134,.15);
+    --escuro-vermelho-card:rgba(245,60,72,.15);
+    --escuro-azul-card:rgba(36,133,229,.16);
+    --escuro-modal:rgba(0,0,0,.65);
+}
+
+body,.menu,.tabela,.movimentacoes,form,.configuracoes,.tema,.campo input,.campo select,.receitas,.despesas,.saldo,.caixaConfirmacao{
+    transition:background-color .3s,color .3s,border-color .3s;
+}
+
+body.tema-escuro{
+    background-color:var(--escuro-fundo);
+    color:var(--escuro-texto);
+}
+
+body.tema-escuro .menu{
+    background-color:var(--escuro-menu);
+}
+
+body.tema-escuro .menu nav .botoes:hover,
+body.tema-escuro .menu nav .ativo .botoes{
+    background-color:var(--escuro-menu-hover);
+}
+
+body.tema-escuro .menu p,
+body.tema-escuro .menu .top p{
+    color:var(--escuro-texto-claro);
+}
+
+body.tema-escuro .menu h1{
+    color:var(--escuro-texto);
+}
+
+body.tema-escuro hr{
+    background-color:var(--escuro-borda);
+}
+
+body.tema-escuro .cabecalho h1,
+body.tema-escuro .titulo h1,
+body.tema-escuro body>h1,
+body.tema-escuro>h1,
+body.tema-escuro .titulo-configuracao h2,
+body.tema-escuro .tema h3,
+body.tema-escuro .titulo-movimentacoes h3,
+body.tema-escuro .texto-bloco p,
+body.tema-escuro .campo label,
+body.tema-escuro .caixaConfirmacao h2{
+    color:var(--escuro-texto);
+}
+
+body.tema-escuro .cabecalho p,
+body.tema-escuro .titulo p,
+body.tema-escuro>h2,
+body.tema-escuro .titulo-configuracao p,
+body.tema-escuro .tema p,
+body.tema-escuro .movimento-texto p,
+body.tema-escuro .caixaConfirmacao p{
+    color:var(--escuro-texto-claro);
+}
+
+body.tema-escuro .movimentacoes,
+body.tema-escuro .tabela,
+body.tema-escuro form,
+body.tema-escuro .configuracoes,
+body.tema-escuro .caixaConfirmacao{
+    background-color:var(--escuro-card);
+    border-color:var(--escuro-borda);
+}
+
+body.tema-escuro thead{
+    background-color:var(--escuro-azul-claro);
+}
+
+body.tema-escuro thead td{
+    color:var(--escuro-texto);
+}
+
+body.tema-escuro tbody td,
+body.tema-escuro .movimento-texto h4{
+    color:var(--escuro-texto);
+    border-color:var(--escuro-borda);
+}
+
+body.tema-escuro tbody tr:hover{
+    background-color:var(--escuro-input);
+}
+
+body.tema-escuro .titulo-movimentacoes,
+body.tema-escuro .movimento{
+    border-color:var(--escuro-borda);
+}
+
+body.tema-escuro .titulo-movimentacoes a,
+body.tema-escuro .vertodas,
+body.tema-escuro .vertodas p{
+    color:var(--escuro-azul);
+}
+
+body.tema-escuro .vertodas{
+    background-color:var(--escuro-azul-claro);
+}
+
+body.tema-escuro .receitas{
+    background-color:var(--escuro-verde-card);
+}
+
+body.tema-escuro .despesas{
+    background-color:var(--escuro-vermelho-card);
+}
+
+body.tema-escuro .saldo{
+    background-color:var(--escuro-azul-card);
+}
+
+body.tema-escuro .saldo h2{
+    color:var(--escuro-azul);
+}
+
+body.tema-escuro .campo input,
+body.tema-escuro .campo select{
+    background-color:var(--escuro-input);
+    color:var(--escuro-texto);
+    border-color:var(--escuro-borda);
+    color-scheme:dark;
+}
+
+body.tema-escuro .campo input::placeholder{
+    color:var(--escuro-texto-claro);
+}
+
+body.tema-escuro .botoes-form button:last-child{
+    background-color:var(--escuro-card);
+    color:var(--escuro-azul);
+    border-color:var(--escuro-azul);
+}
+
+body.tema-escuro .tema{
+    background-color:var(--escuro-input);
+    color:var(--escuro-texto);
+}
+
+body.tema-escuro .tema:hover,
+body.tema-escuro .tema.selecionado{
+    border-color:var(--escuro-azul);
+}
+
+body.tema-escuro .tema.selecionado::after{
+    background-color:var(--escuro-azul);
+}
+
+body.tema-escuro .tema:not(.selecionado)::after{
+    border-color:var(--escuro-texto-claro);
+}
+
+body.tema-escuro #confirmacaoExcluir{
+    background-color:var(--escuro-modal);
+}
+
+body.tema-escuro .botoesConfirmacao button:first-child{
+    background-color:var(--escuro-azul-claro);
+    color:var(--escuro-azul);
+}
+
+body.tema-escuro .receita-home,
+body.tema-escuro .despesa-home,
+body.tema-escuro .nova-receita,
+body.tema-escuro .botoes-form button:first-child{
+    background-color:var(--escuro-azul);
+}
+
+body.tema-escuro .receita-home:hover,
+body.tema-escuro .despesa-home:hover,
+body.tema-escuro .nova-receita:hover,
+body.tema-escuro .botoes-form button:first-child:hover{
+    background-color:var(--escuro-menu-hover);
+}
+
+body.tema-escuro .botoes-form button:last-child:hover{
+    background-color:var(--escuro-azul-claro);
+}
+
+body.tema-escuro .nova-receita p,
+body.tema-escuro .nova-receita span,
+body.tema-escuro .nova-despesa p,
+body.tema-escuro .nova-despesa span{
+    color:var(--escuro-texto);
+}

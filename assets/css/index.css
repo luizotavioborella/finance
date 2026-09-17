@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+    font-family:"Inter";
+}
+
+:root{
+    --azul-principal:rgb(0,0,84);
+    --azul-secundario:rgb(213,213,255);
+    --azul-terciario:rgb(0,0,152);
+    --azul-claro:rgb(232,242,255);
+    --azul-icone:rgb(36,133,229);
+    --azul-texto:rgb(25,46,78);
+    --azul-texto-claro:rgb(75,94,130);
+    --azul-borda:rgb(225,231,240);
+    --verde:rgb(18,169,134);
+    --verde-texto:rgb(0,146,106);
+    --verde-claro:rgba(0,207,145,.12);
+    --vermelho:rgb(245,60,72);
+    --vermelho-texto:rgb(220,40,52);
+    --vermelho-claro:rgba(255,0,0,.10);
+    --azul-card:rgba(0,76,255,.11);
+    --branco:white;
+    --fundo:rgb(247,250,255);
+}
+
+body{
+    background-color:var(--fundo);
+}
+
+main{
+    display:flex;
+    gap:20px;
+    min-height:100vh;
+}
+
+.menu{
+    background-color:var(--azul-principal);
+    display:flex;
+    flex-direction:column;
+    width:250px;
+    min-height:100vh;
+    padding-top:20px;
+    padding-bottom:3.42%;
+    flex-shrink:0;
+}
+
+.menu p{
+    color:var(--azul-secundario);
+}
+
+.menu .top{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap:10px;
+    padding-left:20px;
+}
+
+.menu .top .texto{
+    display:flex;
+    flex-direction:column;
+    margin-top:10px;
+}
+
+.menu h1{
+    color:var(--branco);
+    font-weight:600;
+    font-size:20px;
+}
+
+.menu .top p{
+    font-size:13px;
+    font-weight:600;
+}
+
+.menu p{
+    font-weight:600;
+    font-size:17px;
+}
+
+nav{
+    margin-top:120px;
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+hr{
+    max-width:90%;
+    height:1px;
+    background-color:var(--azul-secundario);
+    border:0;
+    margin-left:10px;
+}
+
+.menu nav .bottom{
+    margin-top:37px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.botoes{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap:20px;
+    padding:10px 10px 10px 20px;
+    border-radius:10px;
+    transition:.3s all;
+}
+
+.menu nav .botoes:hover,.menu nav .ativo .botoes{
+    background-color:var(--azul-terciario);
+}
+
+.conteudo{
+    width:calc(100% - 270px);
+    padding:25px 30px 30px 10px;
+}
+
+.cabecalho h1{
+    color:var(--azul-principal);
+    font-weight:800;
+    font-size:32px;
+}
+
+.cabecalho p{
+    color:var(--azul-texto-claro);
+    font-size:15px;
+    margin-top:5px;
+}
+
+.blocos{
+    display:flex;
+    gap:25px;
+    margin-top:30px;
+}
+
+.receitas,.despesas,.saldo{
+    width:31%;
+    height:140px;
+    border-radius:10px;
+    padding:20px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.receitas{
+    background-color:var(--verde-claro);
+}
+
+.despesas{
+    background-color:var(--vermelho-claro);
+}
+
+.saldo{
+    background-color:var(--azul-card);
+}
+
+.icone{
+    width:60px;
+    min-width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--branco);
+}
+
+.icone span{
+    font-size:36px;
+}
+
+.receita-icone{
+    background-color:var(--verde);
+}
+
+.despesa-icone{
+    background-color:var(--vermelho);
+}
+
+.saldo-icone{
+    background-color:var(--azul-icone);
+}
+
+.texto-bloco p{
+    color:var(--azul-texto);
+    font-weight:600;
+    font-size:14px;
+}
+
+.texto-bloco h2{
+    margin-top:7px;
+    font-size:27px;
+}
+
+.receitas h2{
+    color:var(--verde-texto);
+}
+
+.despesas h2{
+    color:var(--vermelho-texto);
+}
+
+.saldo h2{
+    color:var(--azul-terciario);
+}
+
+.botoes-home{
+    display:flex;
+    gap:25px;
+    margin-top:20px;
+}
+
+.botoes-home>a{
+    width:31%;
+}
+
+.receita-home,.despesa-home,.vertodas{
+    height:55px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.receita-home,.despesa-home{
+    background-color:var(--azul-terciario);
+    color:var(--branco);
+}
+
+.vertodas{
+    background-color:var(--azul-claro);
+    color:var(--azul-terciario);
+}
+
+.receita-home p,.despesa-home p{
+    color:var(--branco);
+    font-weight:600;
+}
+
+.vertodas p{
+    color:var(--azul-terciario);
+    font-weight:600;
+}
+
+.receita-home span,.despesa-home span,.vertodas span{
+    font-size:27px;
+}
+
+.receita-home:hover,.despesa-home:hover{
+    background-color:var(--azul-principal);
+}
+
+.vertodas:hover{
+    background-color:var(--azul-secundario);
+}
+
+.movimentacoes{
+    width:100%;
+    min-height:350px;
+    margin-top:25px;
+    padding:22px;
+    background-color:var(--branco);
+    border:1px solid var(--azul-borda);
+    border-radius:10px;
+}
+
+.titulo-movimentacoes{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-bottom:15px;
+    border-bottom:1px solid var(--azul-borda);
+}
+
+.titulo-movimentacoes h3{
+    color:var(--azul-principal);
+    font-size:18px;
+}
+
+.titulo-movimentacoes a{
+    color:var(--azul-terciario);
+    font-size:11px;
+    font-weight:600;
+}
+
+#movimentacoes{
+    width:100%;
+}
+
+.movimento{
+    min-height:65px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    border-bottom:1px solid var(--azul-borda);
+}
+
+.movimento-icone{
+    width:38px;
+    min-width:38px;
+    height:38px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--branco);
+}
+
+.movimento-icone span{
+    font-size:23px;
+}
+
+.movimento-receita{
+    background-color:var(--verde);
+}
+
+.movimento-despesa{
+    background-color:var(--vermelho);
+}
+
+.movimento-texto{
+    flex:1;
+}
+
+.movimento-texto h4{
+    color:var(--azul-texto);
+    font-size:13px;
+}
+
+.movimento-texto p{
+    color:var(--azul-texto-claro);
+    font-size:11px;
+    margin-top:3px;
+}
+
+.valor-receita{
+    color:var(--verde-texto);
+    font-size:13px;
+}
+
+.valor-despesa{
+    color:var(--vermelho-texto);
+    font-size:13px;
+}
+
+@media(max-width:1100px){
+    .blocos{
+        flex-wrap:wrap;
+    }
+
+    .receitas,.despesas,.saldo{
+        width:47%;
+    }
+
+    .botoes-home{
+        flex-wrap:wrap;
+    }
+
+    .botoes-home>a{
+        width:47%;
+    }
+}

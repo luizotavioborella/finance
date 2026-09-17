@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="utf-8" dir="ltr">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Cadastrar</title>
+    <link rel="stylesheet" href="assets/css/cadastrar.css">
+    <link rel="stylesheet" href="assets/css/tema.css">
+</head>
+<body>
+    <main>
+        <section class="menu">
+            <div class="top">
+                <img src="assets/img/carteira-claro.png" alt="ícone carteira" width="45px" height="60px">
+                <div class="texto">
+                    <h1>FINANCE</h1>
+                    <p>Seu controle financeiro</p>
+                </div>
+            </div>
+
+            <nav>
+                <a href="index.html">
+                    <div class="botoes">
+                        <img src="assets/img/home-claro.png" alt="ícone home" width="35px">
+                        <p>Início</p>
+                    </div>
+                </a>
+
+                <a href="receitas.html">
+                    <div class="botoes">
+                        <img src="assets/img/receita-claro.png" alt="ícone receita" width="35px">
+                        <p>Receitas</p>
+                    </div>
+                </a>
+
+                <a href="despesas.html">
+                    <div class="botoes">
+                        <img src="assets/img/despesa-claro.png" alt="ícone despesa" width="35px">
+                        <p>Despesas</p>
+                    </div>
+                </a>
+
+                <a href="historico.html">
+                    <div class="botoes">
+                        <img src="assets/img/historico-claro.png" alt="ícone histórico" width="35px">
+                        <p>Histórico</p>
+                    </div>
+                </a>
+
+                <div class="bottom">
+                    <hr>
+                    <a href="configuracoes.html">
+                        <div class="botoes">
+                            <img src="assets/img/configuracoes-claro.png" alt="ícone configurações" width="35px">
+                            <p>Configurações</p>
+                        </div>
+                    </a>
+                </div>
+            </nav>
+        </section>
+
+        <article class="conteudo">
+            <div class="titulo">
+                <h1>Cadastrar Movimentação</h1>
+                <p>Preencha os dados abaixo para adicionar uma nova receita ou despesa.</p>
+            </div>
+
+            <form id="formMovimentacao">
+                <div class="campo">
+                    <label for="descricao">Descrição</label>
+                    <input id="descricao" type="text" name="descricao" placeholder="Ex: Salário, supermercado...">
+                </div>
+
+                <div class="campo">
+                    <label for="valor">Valor</label>
+                    <input id="valor" type="number" name="valor" step="0.01" placeholder="R$ 0,00">
+                </div>
+
+                <div class="campo">
+                    <label for="tipo">Tipo de movimentação</label>
+                    <select id="tipo" name="tipo">
+                        <option value="Receita">Receita</option>
+                        <option value="Despesa">Despesa</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="data">Data</label>
+                    <input id="data" type="date" name="data">
+                </div>
+
+                <div class="botoes-form">
+                    <button type="submit">Salvar</button>
+                    <button type="reset">Cancelar</button>
+                </div>
+            </form>
+        </article>
+    </main>
+
+    <script src="assets/js/tema.js"></script>
+    <script src="assets/js/formulario.js"></script>
+    <script>
+        if(localStorage.getItem("temaClaro") == "false"){
+            document.documentElement.classList.add("tema-escuro")
+        }
+    </script>
+</body>
+</html>

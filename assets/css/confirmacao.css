@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter";
+}
+
+body {
+    background: transparent;
+}
+
+#confirmacaoExcluir {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.45);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.caixaConfirmacao {
+    width: 380px;
+    padding: 35px;
+
+    background-color: white;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.caixaConfirmacao h2 {
+    color: #102A56;
+    margin-bottom: 12px;
+}
+
+.caixaConfirmacao p {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.botoesConfirmacao {
+    display: flex;
+    gap: 12px;
+}
+
+.botoesConfirmacao button {
+    flex: 1;
+
+    padding: 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.botoesConfirmacao button:first-child {
+    background-color: #E8F2FF;
+    color: #1769D1;
+}
+
+.botoesConfirmacao button:last-child {
+    background-color: #EF3340;
+    color: white;
+}
+
+.botoesConfirmacao button:hover {
+    transform: scale(1.03);
+}

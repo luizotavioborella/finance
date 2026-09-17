@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações</title>
+    <link rel="stylesheet" href="assets/css/configuracoes.css">
+    <link rel="stylesheet" href="assets/css/tema.css">
+</head>
+<body>
+    <section class="menu">
+            <div class="top">
+                <img src="assets/img/carteira-claro.png" alt="ícone carteira" width="45px" height="60px">
+                <div class="texto"><h1>FINANCE</h1>
+                <p>Seu controle financeiro</p></div>
+            </div>
+            <nav>
+                <a href="index.html">
+                    <div class="botoes">
+                        <img src="assets/img/home-claro.png" alt="ícone home" width="35px">
+                        <p>Início</p>
+                    </div>
+                </a>
+                <a href="receitas.html">
+                    <div class="botoes">
+                        <img src="assets/img/receita-claro.png" alt="ícone seta para baixo" width="35px">
+                        <p>Receitas</p>
+                    </div>
+                </a>
+                <a href="despesas.html">
+                    <div class="botoes">
+                        <img src="assets/img/despesa-claro.png" alt="ícone seta para cima" width="35px">
+                        <p>Despesas</p>
+                    </div>
+                </a>
+                <a href="historico.html">
+                    <div class="botoes">
+                        <img src="assets/img/historico-claro.png" alt="ícone lista" width="35px">
+                        <p>Histórico</p>
+                    </div>
+                </a>
+                <div class="bottom">
+                    <hr>
+                    <a href="configuracoes.html">
+                        <div class="botoes">
+                            <img src="assets/img/configuracoes-claro.png" alt="ícone configurações" width="35px">
+                            <p>Configurações</p>
+                        </div>
+                    </a>
+                </div>
+            </nav>
+        </section>
+
+        <h1>Configurações</h1>
+        <h2>Personalize sua experiência no sistema.</h2>
+
+        <section class="configuracoes">
+
+            <div class="titulo-configuracao">
+
+                <div class="icone-tema">
+                    <img src="assets/img/tema.png" alt="ícone tema"/>
+                </div>
+
+                <div>
+                    <h2>Tema</h2>
+
+                    <p>Escolha o tema que será utilizado no sistema.</p>
+                </div>
+
+            </div>
+
+
+            <div class="opcoes-tema">
+
+                <button class="tema selecionado" onclick="selecionarTema(true)">
+                    <img src="assets/img/tema-claro.png" alt="Tema claro">
+
+                    <h3>Tema Claro</h3>
+
+                    <p>
+                        Interface em tons claros, ideal para
+                        ambientes bem iluminados.
+                    </p>
+                </button>
+
+
+                <button class="tema" onclick="selecionarTema(false)">
+                    <img src="assets/img/tema-escuro.png" alt="Tema escuro">
+
+                    <h3>Tema Escuro</h3>
+
+                    <p>
+                        Interface em tons escuros, ideal para
+                        ambientes com pouca luz.
+                    </p>
+                </button>
+
+            </div>
+        </section>
+
+        <script src="assets/js/tema.js"></script>
+        <script src="assets/js/configuracoes.js" defer></script>
+        <script>
+            if(localStorage.getItem("temaClaro") == "false"){
+                document.documentElement.classList.add("tema-escuro")
+            }
+        </script>
+
+    
+</body>
+</html>

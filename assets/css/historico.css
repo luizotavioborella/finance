@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+    font-family:"Inter";
+}
+
+:root{
+    --azul-principal:rgb(0,0,84);
+    --azul-secundario:rgb(213,213,255);
+    --azul-terciario:rgb(0,0,152);
+    --azul-claro:rgb(232,242,255);
+    --azul-texto:rgb(25,46,78);
+    --azul-texto-claro:rgb(75,94,130);
+    --azul-borda:rgb(225,231,240);
+    --verde:rgb(18,169,134);
+    --vermelho:rgb(245,60,72);
+    --branco:white;
+    --fundo:rgb(247,250,255);
+}
+
+body{
+    background-color:var(--fundo);
+}
+
+main{
+    display:flex;
+    min-height:100vh;
+}
+
+.menu{
+    background-color:var(--azul-principal);
+    display:flex;
+    flex-direction:column;
+    width:250px;
+    min-height:100vh;
+    padding-top:20px;
+    padding-bottom:3.42%;
+    flex-shrink:0;
+}
+
+.menu p{
+    color:var(--azul-secundario);
+}
+
+.menu .top{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap:10px;
+    padding-left:20px;
+}
+
+.menu .top .texto{
+    display:flex;
+    flex-direction:column;
+    margin-top:10px;
+}
+
+.menu h1{
+    color:var(--branco);
+    font-weight:600;
+    font-size:20px;
+}
+
+.menu .top p{
+    font-size:13px;
+    font-weight:600;
+}
+
+.menu p{
+    font-weight:600;
+    font-size:17px;
+}
+
+nav{
+    margin-top:120px;
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+hr{
+    max-width:90%;
+    height:1px;
+    background-color:var(--azul-secundario);
+    border:0;
+    margin-left:10px;
+}
+
+.menu nav .bottom{
+    margin-top:37px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.botoes{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap:20px;
+    padding:10px 10px 10px 20px;
+    border-radius:10px;
+    transition:.3s all;
+}
+
+.menu nav .botoes:hover,.menu nav .ativo .botoes{
+    background-color:var(--azul-terciario);
+}
+
+.conteudo{
+    width:calc(100% - 250px);
+    padding:40px 40px;
+}
+
+.cabecalho h1{
+    color:var(--azul-principal);
+    font-size:30px;
+    font-weight:800;
+}
+
+.cabecalho p{
+    color:var(--azul-texto-claro);
+    font-size:15px;
+    margin-top:6px;
+}
+
+.tabela{
+    width:100%;
+    margin-top:30px;
+    background-color:var(--branco);
+    border:1px solid var(--azul-borda);
+    border-radius:10px;
+    overflow:hidden;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background-color:var(--azul-claro);
+}
+
+thead td{
+    padding:15px 18px;
+    color:var(--azul-principal);
+    font-size:13px;
+    font-weight:700;
+}
+
+tbody td{
+    padding:15px 18px;
+    color:var(--azul-texto);
+    font-size:12px;
+    border-top:1px solid var(--azul-borda);
+}
+
+tbody tr:hover{
+    background-color:var(--fundo);
+}
+
+tbody button{
+    border:0;
+    background-color:transparent;
+    cursor:pointer;
+    padding:5px;
+}
+
+tbody button img{
+    width:18px;
+    height:18px;
+}
+
+.receita{
+    color:var(--verde);
+    font-weight:600;
+}
+
+.despesa{
+    color:var(--vermelho);
+    font-weight:600;
+}
+
+@media(max-width:1000px){
+    .conteudo{
+        padding:30px 20px;
+        overflow-x:auto;
+    }
+
+    .tabela{
+        min-width:700px;
+    }
+}
+
+#confirmacaoExcluir{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background-color:rgba(0,0,0,.45);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    visibility:hidden;
+    transition:.3s;
+}
+
+#confirmacaoExcluir.ativo{
+    opacity:1;
+    visibility:visible;
+}
+
+.caixaConfirmacao{
+    width:380px;
+    padding:35px;
+    background-color:var(--branco);
+    border-radius:18px;
+    text-align:center;
+    transform:translateY(20px);
+    transition:.3s;
+}
+
+#confirmacaoExcluir.ativo .caixaConfirmacao{
+    transform:translateY(0);
+}
+
+.caixaConfirmacao h2{
+    color:var(--azul-principal);
+    margin-bottom:12px;
+}
+
+.caixaConfirmacao p{
+    color:var(--azul-texto-claro);
+    margin-bottom:25px;
+}
+
+.botoesConfirmacao{
+    display:flex;
+    gap:12px;
+}
+
+.botoesConfirmacao button{
+    flex:1;
+    padding:12px;
+    border:0;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.botoesConfirmacao button:first-child{
+    background-color:var(--azul-claro);
+    color:var(--azul-terciario);
+}
+
+.botoesConfirmacao button:last-child{
+    background-color:var(--vermelho);
+    color:var(--branco);
+}
+
+.botoesConfirmacao button:hover{
+    transform:scale(1.03);
+}

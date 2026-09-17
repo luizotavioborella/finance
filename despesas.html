@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Despesas</title>
+    <link rel="stylesheet" href="assets/css/despesas.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded">
+    <link rel="stylesheet" href="assets/css/tema.css">
+</head>
+<body>
+    <main>
+        <section class="menu">
+            <div class="top">
+                <img src="assets/img/carteira-claro.png" alt="ícone carteira" width="45px" height="60px">
+                <div class="texto">
+                    <h1>FINANCE</h1>
+                    <p>Seu controle financeiro</p>
+                </div>
+            </div>
+
+            <nav>
+                <a href="index.html">
+                    <div class="botoes">
+                        <img src="assets/img/home-claro.png" alt="ícone home" width="35px">
+                        <p>Início</p>
+                    </div>
+                </a>
+
+                <a href="receitas.html">
+                    <div class="botoes">
+                        <img src="assets/img/receita-claro.png" alt="ícone receita" width="35px">
+                        <p>Receitas</p>
+                    </div>
+                </a>
+
+                <a href="despesas.html" class="ativo">
+                    <div class="botoes">
+                        <img src="assets/img/despesa-claro.png" alt="ícone despesa" width="35px">
+                        <p>Despesas</p>
+                    </div>
+                </a>
+
+                <a href="historico.html">
+                    <div class="botoes">
+                        <img src="assets/img/historico-claro.png" alt="ícone histórico" width="35px">
+                        <p>Histórico</p>
+                    </div>
+                </a>
+
+                <div class="bottom">
+                    <hr>
+                    <a href="configuracoes.html">
+                        <div class="botoes">
+                            <img src="assets/img/configuracoes-claro.png" alt="ícone configurações" width="35px">
+                            <p>Configurações</p>
+                        </div>
+                    </a>
+                </div>
+            </nav>
+        </section>
+
+        <section class="conteudo">
+            <div class="cabecalho">
+                <div>
+                    <h1>Todas as Despesas</h1>
+                    <p>Veja abaixo todas as despesas cadastradas.</p>
+                </div>
+
+                <a href="cadastrar.html" class="nova-despesa">
+                    <span class="material-symbols-rounded">add</span>
+                    <p>Nova Despesa</p>
+                </a>
+            </div>
+
+            <div class="tabela">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Descrição</td>
+                            <td>Valor</td>
+                            <td>Tipo</td>
+                            <td>Data</td>
+                            <td>Ações</td>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabelaDespesas"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <div id="confirmacaoExcluir">
+            <div class="caixaConfirmacao">
+                <h2>Excluir movimentação</h2>
+                <p>Tem certeza que deseja excluir?</p>
+
+                <div class="botoesConfirmacao">
+                    <button onclick="cancelarExclusao()">Cancelar</button>
+                    <button onclick="confirmarExclusao()">Excluir</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/tema.js"></script>
+    <script src="assets/js/despesas.js"></script>
+    <script>
+        if(localStorage.getItem("temaClaro") == "false"){
+            document.documentElement.classList.add("tema-escuro")
+        }
+    </script>
+</body>
+</html>
