@@ -6,6 +6,7 @@
     <title>Histórico de Movimentações</title>
     <link rel="stylesheet" href="assets/css/historico.css">
     <link rel="stylesheet" href="assets/css/tema.css">
+    <link rel="stylesheet" href="assets/css/responsivo.css">
 </head>
 <body>
     <main>
@@ -61,8 +62,11 @@
 
         <section class="conteudo">
             <div class="cabecalho">
-                <h1>Histórico de Movimentações</h1>
-                <p>Confira todas as receitas e despesas cadastradas.</p>
+                <div>
+                    <h1>Histórico de Movimentações</h1>
+                    <p>Confira todas as receitas e despesas cadastradas.</p>
+                </div>
+                <button class="excluir-tudo" onclick="mostrarConfirmacaoTudo()">Excluir Tudo</button>
             </div>
 
             <div class="tabela">
@@ -92,19 +96,19 @@
                 </div>
             </div>
         </div>
-    </main>
 
-    <div id="confirmacaoExcluir">
-        <div class="caixaConfirmacao">
-            <h2>Excluir movimentação</h2>
-            <p>Tem certeza que deseja excluir?</p>
+        <div id="confirmacaoExcluirTudo">
+            <div class="caixaConfirmacao">
+                <h2>Excluir todas as movimentações</h2>
+                <p>Tem certeza que deseja excluir tudo?</p>
 
-            <div class="botoesConfirmacao">
-                <button onclick="cancelarExclusao()">Cancelar</button>
-                <button onclick="confirmarExclusao()">Excluir</button>
+                <div class="botoesConfirmacao">
+                    <button onclick="cancelarExclusaoTudo()">Cancelar</button>
+                    <button onclick="confirmarExclusaoTudo()">Excluir Tudo</button>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
 
     <script src="assets/js/tema.js"></script>
     <script src="assets/js/historico.js"></script>

@@ -82,3 +82,13 @@ body {
 .botoesConfirmacao button:hover {
     transform: scale(1.03);
 }
+@media(max-width:520px){
+    .caixaConfirmacao{
+        width:calc(100% - 32px);
+        padding:25px;
+    }
+
+    .botoesConfirmacao{
+        flex-direction:column;
+    }
+}

@@ -163,7 +163,8 @@ body.tema-escuro .tema:not(.selecionado)::after{
     border-color:var(--escuro-texto-claro);
 }
 
-body.tema-escuro #confirmacaoExcluir{
+body.tema-escuro #confirmacaoExcluir,
+body.tema-escuro #confirmacaoExcluirTudo{
     background-color:var(--escuro-modal);
 }
 

@@ -117,6 +117,30 @@ hr{
     padding:40px 40px;
 }
 
+
+.cabecalho{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.excluir-tudo{
+    height:45px;
+    padding:0 18px;
+    background-color:var(--vermelho);
+    color:var(--branco);
+    border:0;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:13px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.excluir-tudo:hover{
+    transform:scale(1.03);
+}
+
 .cabecalho h1{
     color:var(--azul-principal);
     font-size:30px;
@@ -198,7 +222,8 @@ tbody button img{
     }
 }
 
-#confirmacaoExcluir{
+#confirmacaoExcluir,
+#confirmacaoExcluirTudo{
     position:fixed;
     top:0;
     left:0;
@@ -213,7 +238,8 @@ tbody button img{
     transition:.3s;
 }
 
-#confirmacaoExcluir.ativo{
+#confirmacaoExcluir.ativo,
+#confirmacaoExcluirTudo.ativo{
     opacity:1;
     visibility:visible;
 }
@@ -228,7 +254,8 @@ tbody button img{
     transition:.3s;
 }
 
-#confirmacaoExcluir.ativo .caixaConfirmacao{
+#confirmacaoExcluir.ativo .caixaConfirmacao,
+#confirmacaoExcluirTudo.ativo .caixaConfirmacao{
     transform:translateY(0);
 }
 

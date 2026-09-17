@@ -38,3 +38,16 @@ function confirmarExclusao(){
 
     location.reload();
 }
+
+function mostrarConfirmacaoTudo(){
+    document.querySelector("#confirmacaoExcluirTudo").classList.add("ativo");
+}
+
+function cancelarExclusaoTudo(){
+    document.querySelector("#confirmacaoExcluirTudo").classList.remove("ativo");
+}
+
+function confirmarExclusaoTudo(){
+    localStorage.removeItem("movimentacoes");
+    location.reload();
+}
