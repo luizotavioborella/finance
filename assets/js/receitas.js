@@ -1,6 +1,6 @@
 var tabela = document.querySelector("#tabelaReceitas");
 
-var movimentacoes = JSON.parse(localStorage.getItem("movimentacoes")) || [];
+var movimentacoes = JSON.parse(localStorage.getItem("movimentacoes")) || []; 
 
 movimentacoes.forEach(function(movimentacao,indice){
 

@@ -48,5 +48,5 @@ function confirmarExclusao() {
 
     localStorage.setItem("movimentacoes", JSON.stringify(movimentacoes));
 
-    location.reload(); // para recarregar a página após a remoção da movimentação
+    location.reload(); 
 }

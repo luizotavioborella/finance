@@ -1,9 +1,11 @@
 var tabela = document.querySelector("#tabelaHistorico");
 
 var movimentacoes = JSON.parse(localStorage.getItem("movimentacoes")) || [];
+// JSon = javascript object notation
+// if ternário (se não tiver nada salvo em localStorage, é devolvido uma lista vazia)
 
-movimentacoes.forEach(function(movimentacao,indice){
-    var novaLinha = document.createElement("tr");
+movimentacoes.forEach(function(movimentacao,indice){ // perccorre o objeto que contém as movimentações
+    var novaLinha = document.createElement("tr"); // cria uma nova linha, e dentro dela adiciona novas colunas
 
     novaLinha.innerHTML = `
         <td>${movimentacao.descricao}</td>
@@ -15,28 +17,27 @@ movimentacoes.forEach(function(movimentacao,indice){
                 <img src="assets/img/deletar.png" alt="Excluir">
             </button>
         </td>
-    `;
+    `; // `${}` serve para adicionar no meio do texto alguma variável, mesmo que fazer "Olá, " + nome
 
-    tabela.appendChild(novaLinha);
+    tabela.appendChild(novaLinha); // adiciona a nova linha criada na tabela capturada no início
 });
 
-var indiceParaExcluir;
-
+var indiceParaExcluir; // para excluir um registro único precisamos identificar qual vai ser excluído
 function mostrarConfirmacao(indice){
-    indiceParaExcluir = indice;
-    document.querySelector("#confirmacaoExcluir").classList.add("ativo");
+    indiceParaExcluir = indice; // identifica o indice
+    document.querySelector("#confirmacaoExcluir").classList.add("ativo"); // adiciona class para ativar o quadro de confirmação de exclusão
 }
 
 function cancelarExclusao(){
-    document.querySelector("#confirmacaoExcluir").classList.remove("ativo");
+    document.querySelector("#confirmacaoExcluir").classList.remove("ativo"); // remove o class que ativa a confirmação de exclusão
 }
 
-function confirmarExclusao(){
-    movimentacoes.splice(indiceParaExcluir,1);
+function confirmarExclusao(){ // se for confirmada a exclusão essa função é chamada
+    movimentacoes.splice(indiceParaExcluir,1); // remover o indice, somente uma vez
 
-    localStorage.setItem("movimentacoes",JSON.stringify(movimentacoes));
+    localStorage.setItem("movimentacoes",JSON.stringify(movimentacoes)); // transforma os registros que antes estavam em objeto para texto novamente
 
-    location.reload();
+    location.reload(); // atualizar a tela 
 }
 
 function mostrarConfirmacaoTudo(){
@@ -48,6 +49,6 @@ function cancelarExclusaoTudo(){
 }
 
 function confirmarExclusaoTudo(){
-    localStorage.removeItem("movimentacoes");
+    localStorage.removeItem("movimentacoes"); // remove todas as movimentação salvas
     location.reload();
 }
